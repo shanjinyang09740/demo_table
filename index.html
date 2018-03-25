@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格增删改查</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+    <div class="content">
+      <div class="headTitle">
+        <a href="javascript:void(0);" class="add-btn" id="add-btn">新增</a>
+        <input class="search-word" type="text" name="" />
+        <a href="javascript:void(0);" class="search-btn" id="search-btn">查询</a>
+        <a href="javascript:void(0);" class="back-btn" id="back-btn">返回</a> 
+      </div>
+      <table class="tab" id="tab">
+        <tr class="trr">
+          <th>ID</th>
+          <th>Name</th>
+          <th>salary</th>
+          <th>功能</th>
+        </tr>
+        <tbody id="hide-tbody">
+          <tr class="trr" style="display: none;">
+            <td class="num"><input id="keyText" type="text" name="" /></td>
+            <td><input type="text" name="" /></td>
+            <td><input type="text" name="" /></td>
+            <td class="lastTd">
+              <a href="javascript:void(0);" class="save-btn">保存</a>
+              <a href="javascript:void(0);" class="edit-btn" style="display: none;">修改</a>
+              <a href="javascript:void(0);" class="del-btn" >删除</a>
+            </td>
+          </tr>
+        </tbody>
+        <tbody id="show-tbody">
+          <tr class="trr">
+            <td class="num">1</td>
+            <td>小张</td>
+            <td>2000</td>
+            <td class="lastTd">
+              <a href="javascript:void(0);" class="save-btn" style="display: none;">保存</a>
+              <a href="javascript:void(0);" class="edit-btn">修改</a>
+              <a href="javascript:void(0);" class="del-btn" >删除</a>
+            </td>
+          </tr>
+          <tr class="trr">
+            <td class="num">2</td>
+            <td>小王</td>
+            <td>3000</td>
+            <td class="lastTd">
+              <a href="javascript:void(0);" class="save-btn" style="display: none;">保存</a>
+              <a href="javascript:void(0);" class="edit-btn">修改</a>
+              <a href="javascript:void(0);" class="del-btn" >删除</a>
+            </td>
+          </tr>
+          <tr class="trr">
+            <td class="num">3</td>
+            <td>小李</td>
+            <td>4000</td>
+            <td class="lastTd">
+              <a href="javascript:void(0);" class="save-btn" style="display: none;">保存</a>
+              <a href="javascript:void(0);" class="edit-btn">修改</a>
+              <a href="javascript:void(0);" class="del-btn" >删除</a>
+            </td>
+          </tr>
+          <tr class="trr">
+            <td class="num">4</td>
+            <td>小赵</td>
+            <td>5000</td>
+            <td class="lastTd">
+              <a href="javascript:void(0);" class="save-btn" style="display: none;">保存</a>
+              <a href="javascript:void(0);" class="edit-btn">修改</a>
+              <a href="javascript:void(0);" class="del-btn" >删除</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+</body>
+</html>
