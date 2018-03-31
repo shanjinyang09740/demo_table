@@ -65,8 +65,8 @@ $(function(){
     });
 
     //实现表格隔行变色
-    $('#show-tbody tr:even').children('td').css('backgroundColor', 'green');
-    $('#show-tbody tr:odd').children('td').css('backgroundColor', '#e5f1f4');
+    $('.trr:even').children('td').css('backgroundColor', 'green');
+    $('.trr:odd').children('td').css('backgroundColor', '#e5f1f4');
 
     //隐藏一行/一列
     /*$('#show-tbody tr:eq(3)').hide();*/ //隐藏一行
@@ -81,24 +81,42 @@ $(function(){
     /*$('#tab tr:not(:last)').remove();*/
     $('#tab tr:eq(0)').remove(); //删除指定行
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //获取每一行指定的单元格的值
+    var arr = [];
+    $('#show-tbody tr td:nth-child(2)').each(function(key, value){
+        arr.push($(this).html());
+    });
+    var result = arr.join(',');
+    /*console.log(result);*/
 
 
 
 
 });
+
+//全选/反选
+function checkAllClick() {
+    /*$('#show-tbody tr').find('input[type="checkbox"]').each(function(i){
+        if($(this).attr('checked')){
+            $(this).attr('checked', false);
+        }else{
+            $(this).attr('checked', true);
+        }
+    });*/
+
+    $('#show-tbody tr').find('input[type="checkbox"]').each(function(i){
+        //获取当前复选框是否选中
+        var isChecked = $(this).prop('checked');
+        if(isChecked){
+            //设置不选中
+            $(this).attr('checked', false);
+        }else{
+            //设置选中
+            $(this).attr('checked', true);
+        }
+    });
+    
+
+
+
+}
